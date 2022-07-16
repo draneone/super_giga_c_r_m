@@ -2426,8 +2426,8 @@ class _ObjectBasePageCopyWidgetState extends State<ObjectBasePageCopyWidget> {
                                                             scrollDirection:
                                                                 Axis.horizontal,
                                                             children: [
-                                                              Image.network(
-                                                                'https://avagroup.ru/media/cache/resolve/project_slider_tmb_xxxl/uploads/9/2-xxxl.jpg',
+                                                              Image.asset(
+                                                                'assets/images/image_12.png',
                                                                 width: 100,
                                                                 height: 100,
                                                                 fit: BoxFit
