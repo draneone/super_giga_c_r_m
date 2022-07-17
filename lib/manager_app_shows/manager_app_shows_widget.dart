@@ -133,162 +133,230 @@ class _ManagerAppShowsWidgetState extends State<ManagerAppShowsWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             12, 8, 12, 8),
                                         child: Row(
-                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
-                                            Expanded(
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(12, 0, 8, 0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      showsItem.client,
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 0, 8, 0),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    showsItem.client,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF101213),
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    'Комнат: ${showsItem.rooms.toString()}',
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF101213),
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                  ),
+                                                  Text(
+                                                    showsItem.budget.toString(),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily: 'Outfit',
+                                                          color:
+                                                              Color(0xFF101213),
+                                                          fontSize: 14,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 4, 0, 0),
+                                                    child: Text(
+                                                      showsItem.comment,
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyText1
+                                                              .bodyText2
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
                                                                 color: Color(
-                                                                    0xFF101213),
+                                                                    0xFF57636C),
                                                                 fontSize: 14,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
                                                               ),
                                                     ),
-                                                    Text(
-                                                      showsItem.budget
-                                                          .toString(),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: Color(
-                                                                    0xFF101213),
-                                                                fontSize: 14,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0, 4, 0, 0),
-                                                      child: Text(
-                                                        showsItem.comment,
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyText2
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
-                                                                  color: Color(
-                                                                      0xFF57636C),
-                                                                  fontSize: 14,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .normal,
-                                                                ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              width: 100,
+                                              height: 100,
+                                              decoration: BoxDecoration(),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0, 0, 4, 0),
+                                                        child:
+                                                            FlutterFlowIconButton(
+                                                          borderColor:
+                                                              Color(0xFFF1F4F8),
+                                                          borderRadius: 8,
+                                                          borderWidth: 2,
+                                                          buttonSize: 40,
+                                                          icon: FaIcon(
+                                                            FontAwesomeIcons
+                                                                .whatsapp,
+                                                            color: Color(
+                                                                0xFF57636C),
+                                                            size: 20,
+                                                          ),
+                                                          onPressed: () async {
+                                                            await launchURL(
+                                                                'https://wa.me/${showsItem.clientPhone}');
+                                                          },
+                                                        ),
                                                       ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 0, 4, 0),
-                                              child: FlutterFlowIconButton(
-                                                borderColor: Color(0xFFF1F4F8),
-                                                borderRadius: 8,
-                                                borderWidth: 2,
-                                                buttonSize: 40,
-                                                icon: FaIcon(
-                                                  FontAwesomeIcons.whatsapp,
-                                                  color: Color(0xFF57636C),
-                                                  size: 20,
-                                                ),
-                                                onPressed: () async {
-                                                  await launchURL(
-                                                      'https://wa.me/${showsItem.clientPhone}');
-                                                },
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 0, 4, 0),
-                                              child: FlutterFlowIconButton(
-                                                borderColor: Color(0xFFF1F4F8),
-                                                borderRadius: 8,
-                                                borderWidth: 2,
-                                                buttonSize: 40,
-                                                icon: FaIcon(
-                                                  FontAwesomeIcons
-                                                      .telegramPlane,
-                                                  color: Color(0xFF57636C),
-                                                  size: 20,
-                                                ),
-                                                onPressed: () async {
-                                                  await launchURL(
-                                                      'tg://${showsItem.clientPhone}');
-                                                },
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 0, 4, 0),
-                                              child: FlutterFlowIconButton(
-                                                borderColor: Color(0xFFF1F4F8),
-                                                borderRadius: 8,
-                                                borderWidth: 2,
-                                                buttonSize: 40,
-                                                icon: Icon(
-                                                  Icons.call,
-                                                  color: Color(0xFF57636C),
-                                                  size: 20,
-                                                ),
-                                                onPressed: () async {
-                                                  await launchURL(
-                                                      'tel:${showsItem.clientPhone}');
-                                                },
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0, 0, 4, 0),
-                                              child: FlutterFlowIconButton(
-                                                borderColor: Color(0xFFF1F4F8),
-                                                borderRadius: 8,
-                                                borderWidth: 2,
-                                                buttonSize: 40,
-                                                icon: Icon(
-                                                  Icons.read_more_rounded,
-                                                  color: Color(0xFF57636C),
-                                                  size: 20,
-                                                ),
-                                                onPressed: () async {
-                                                  await Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          ObjectsForShowWidget(),
-                                                    ),
-                                                  );
-                                                },
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0, 0, 4, 0),
+                                                        child:
+                                                            FlutterFlowIconButton(
+                                                          borderColor:
+                                                              Color(0xFFF1F4F8),
+                                                          borderRadius: 8,
+                                                          borderWidth: 2,
+                                                          buttonSize: 40,
+                                                          icon: Icon(
+                                                            Icons.call,
+                                                            color: Color(
+                                                                0xFF57636C),
+                                                            size: 20,
+                                                          ),
+                                                          onPressed: () async {
+                                                            await launchURL(
+                                                                'tel:${showsItem.clientPhone}');
+                                                          },
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                  Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.min,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0, 0, 4, 0),
+                                                        child:
+                                                            FlutterFlowIconButton(
+                                                          borderColor:
+                                                              Color(0xFFF1F4F8),
+                                                          borderRadius: 8,
+                                                          borderWidth: 0,
+                                                          buttonSize: 40,
+                                                          fillColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .secondaryColor,
+                                                          icon: Icon(
+                                                            Icons
+                                                                .read_more_rounded,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryBackground,
+                                                            size: 20,
+                                                          ),
+                                                          onPressed: () async {
+                                                            await Navigator
+                                                                .push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder:
+                                                                    (context) =>
+                                                                        ObjectsForShowWidget(
+                                                                  toshow: showsItem
+                                                                      .reference,
+                                                                ),
+                                                              ),
+                                                            );
+                                                          },
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0, 0, 4, 0),
+                                                        child:
+                                                            FlutterFlowIconButton(
+                                                          borderColor:
+                                                              Color(0xFFF1F4F8),
+                                                          borderRadius: 8,
+                                                          borderWidth: 2,
+                                                          buttonSize: 40,
+                                                          icon: FaIcon(
+                                                            FontAwesomeIcons
+                                                                .telegramPlane,
+                                                            color: Color(
+                                                                0xFF57636C),
+                                                            size: 20,
+                                                          ),
+                                                          onPressed: () async {
+                                                            await launchURL(
+                                                                'tg://${showsItem.clientPhone}');
+                                                          },
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ],

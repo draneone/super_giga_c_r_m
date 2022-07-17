@@ -15,6 +15,7 @@ class CreateObjectWidget extends StatefulWidget {
 }
 
 class _CreateObjectWidgetState extends State<CreateObjectWidget> {
+  ObjectRecord objAdded;
   TextEditingController adressController;
   TextEditingController jkController;
   TextEditingController summController;
@@ -347,7 +348,7 @@ class _CreateObjectWidgetState extends State<CreateObjectWidget> {
                       onPressed: () async {
                         final objectCreateData = createObjectRecordData(
                           rooms: int.parse(roomsController.text),
-                          summ: int.parse(urlController.text),
+                          summ: int.parse(summController.text),
                           adress: adressController.text,
                           newmade: newmadeValue,
                           jk: jkController.text,
@@ -355,9 +356,14 @@ class _CreateObjectWidgetState extends State<CreateObjectWidget> {
                           area: int.parse(areaController.text),
                           photo: urlController.text,
                         );
-                        await ObjectRecord.collection
-                            .doc()
-                            .set(objectCreateData);
+                        var objectRecordReference =
+                            ObjectRecord.collection.doc();
+                        await objectRecordReference.set(objectCreateData);
+                        objAdded = ObjectRecord.getDocumentFromData(
+                            objectCreateData, objectRecordReference);
+                        Navigator.pop(context);
+
+                        setState(() {});
                       },
                       text: 'Добавить объект',
                       options: FFButtonOptions(

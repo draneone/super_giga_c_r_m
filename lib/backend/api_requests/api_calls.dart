@@ -24,8 +24,8 @@ class GetObjectsCall {
 class GetBanksCall {
   static Future<ApiCallResponse> call({
     int placementsValue,
-    int month,
-    int initialAmount,
+    String month = '',
+    String initialAmount = '',
   }) {
     return ApiManager.instance.makeApiCall(
       callName: 'GET BANKS',

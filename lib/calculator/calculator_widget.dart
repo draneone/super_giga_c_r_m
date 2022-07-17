@@ -1979,13 +1979,12 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                                                                   int.parse(
                                                                       textController2
                                                                           .text),
-                                                              month: int.parse(
+                                                              month:
                                                                   textController3
-                                                                      .text),
+                                                                      .text,
                                                               initialAmount:
-                                                                  int.parse(
-                                                                      textController4
-                                                                          .text),
+                                                                  textController4
+                                                                      .text,
                                                             );
 
                                                             setState(() {});
@@ -2112,7 +2111,7 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                                                                   banksResponseItem,
                                                                   r'''$..Иконка''',
                                                                 ),
-                                                                width: 70,
+                                                                width: 100,
                                                                 height: 100,
                                                                 fit: BoxFit
                                                                     .cover,

@@ -28,6 +28,7 @@ class _BotsheetWidgetState extends State<BotsheetWidget> {
   TextEditingController textController3;
   TextEditingController textController4;
   TextEditingController textController6;
+  ShowsRecord tretre;
 
   @override
   void initState() {
@@ -506,9 +507,13 @@ class _BotsheetWidgetState extends State<BotsheetWidget> {
                               datefrom: dateTimeFormat('d/M/y', datePicked1),
                               dateto: dateTimeFormat('d/M/y', datePicked2),
                             );
-                            await ShowsRecord.collection
-                                .doc()
-                                .set(showsCreateData);
+                            var showsRecordReference =
+                                ShowsRecord.collection.doc();
+                            await showsRecordReference.set(showsCreateData);
+                            tretre = ShowsRecord.getDocumentFromData(
+                                showsCreateData, showsRecordReference);
+
+                            setState(() {});
                           },
                           text: 'Создать заявку',
                           options: FFButtonOptions(

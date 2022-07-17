@@ -2655,7 +2655,6 @@ class _ObjectBasePageWidgetState extends State<ObjectBasePageWidget> {
                                                 mainAxisSpacing: 10,
                                                 childAspectRatio: 1,
                                               ),
-                                              primary: false,
                                               shrinkWrap: true,
                                               scrollDirection: Axis.vertical,
                                               itemCount: objs.length,
