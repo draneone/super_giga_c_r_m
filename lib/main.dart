@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(brightness: Brightness.light),
       themeMode: _themeMode,
-      home: ManagerAppHomeWidget(),
+      home: ObjectBasePageWidget(),
     );
   }
 }

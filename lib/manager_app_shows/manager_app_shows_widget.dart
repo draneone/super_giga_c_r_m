@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../objects_for_show/objects_for_show_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ManagerAppShowsWidget extends StatefulWidget {
@@ -206,6 +207,45 @@ class _ManagerAppShowsWidgetState extends State<ManagerAppShowsWidget> {
                                                     ),
                                                   ],
                                                 ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 0, 4, 0),
+                                              child: FlutterFlowIconButton(
+                                                borderColor: Color(0xFFF1F4F8),
+                                                borderRadius: 8,
+                                                borderWidth: 2,
+                                                buttonSize: 40,
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.whatsapp,
+                                                  color: Color(0xFF57636C),
+                                                  size: 20,
+                                                ),
+                                                onPressed: () async {
+                                                  await launchURL(
+                                                      'https://wa.me/${showsItem.clientPhone}');
+                                                },
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(0, 0, 4, 0),
+                                              child: FlutterFlowIconButton(
+                                                borderColor: Color(0xFFF1F4F8),
+                                                borderRadius: 8,
+                                                borderWidth: 2,
+                                                buttonSize: 40,
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons
+                                                      .telegramPlane,
+                                                  color: Color(0xFF57636C),
+                                                  size: 20,
+                                                ),
+                                                onPressed: () async {
+                                                  await launchURL(
+                                                      'tg://${showsItem.clientPhone}');
+                                                },
                                               ),
                                             ),
                                             Padding(

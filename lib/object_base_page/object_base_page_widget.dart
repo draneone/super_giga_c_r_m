@@ -2627,7 +2627,6 @@ class _ObjectBasePageWidgetState extends State<ObjectBasePageWidget> {
                                           0, 16, 0, 0),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Color(0xFF74A8B2),
                                           borderRadius:
                                               BorderRadius.circular(8),
                                         ),
@@ -2904,7 +2903,10 @@ class _ObjectBasePageWidgetState extends State<ObjectBasePageWidget> {
                                                                         padding:
                                                                             MediaQuery.of(context).viewInsets,
                                                                         child:
-                                                                            BotsheetWidget(),
+                                                                            BotsheetWidget(
+                                                                          obj: objsItem
+                                                                              .reference,
+                                                                        ),
                                                                       );
                                                                     },
                                                                   );

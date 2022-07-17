@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ObjectsForShowWidget extends StatefulWidget {
@@ -177,6 +178,44 @@ class _ObjectsForShowWidgetState extends State<ObjectsForShowWidget> {
                                     ),
                                   ],
                                 ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
+                              child: FlutterFlowIconButton(
+                                borderColor: Color(0xFFF1F4F8),
+                                borderRadius: 8,
+                                borderWidth: 2,
+                                buttonSize: 40,
+                                icon: FaIcon(
+                                  FontAwesomeIcons.whatsapp,
+                                  color: Color(0xFF57636C),
+                                  size: 20,
+                                ),
+                                onPressed: () async {
+                                  await launchURL(
+                                      'https://wa.me/${objectsForShowShowsRecord.clientPhone}');
+                                },
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 4, 0),
+                              child: FlutterFlowIconButton(
+                                borderColor: Color(0xFFF1F4F8),
+                                borderRadius: 8,
+                                borderWidth: 2,
+                                buttonSize: 40,
+                                icon: FaIcon(
+                                  FontAwesomeIcons.telegramPlane,
+                                  color: Color(0xFF57636C),
+                                  size: 20,
+                                ),
+                                onPressed: () async {
+                                  await launchURL(
+                                      'tg://${objectsForShowShowsRecord.clientPhone}');
+                                },
                               ),
                             ),
                             Padding(
