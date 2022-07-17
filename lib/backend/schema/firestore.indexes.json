@@ -1,3 +1,18 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "object",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "rooms",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "summ",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ]
 }

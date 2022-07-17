@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>275626890043-afjhs65ju79972f8krbpld4r245qlvgn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.275626890043-afjhs65ju79972f8krbpld4r245qlvgn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>275626890043-rqg0sc104hlhq15ucohl6q2mknq4j312.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBLqVUBhhRNL9vbWOp8jOlp5S0gmDRE7Ms</string>
+	<key>GCM_SENDER_ID</key>
+	<string>275626890043</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>SuperGigaCRM.io</string>
+	<key>PROJECT_ID</key>
+	<string>supergigacrm</string>
+	<key>STORAGE_BUCKET</key>
+	<string>supergigacrm.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:275626890043:ios:c3787a262a206b81be5d1e</string>
+</dict>
+</plist>

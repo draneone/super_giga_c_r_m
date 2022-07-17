@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "275626890043",
+    "project_id": "supergigacrm",
+    "storage_bucket": "supergigacrm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275626890043:android:8fb8488c68735ddabe5d1e",
+        "android_client_info": {
+          "package_name": "SuperGigaCRM.io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275626890043-rqg0sc104hlhq15ucohl6q2mknq4j312.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "SuperGigaCRM.io",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "275626890043-gbkhdo9nshvs585a9o7cnp4fk6rmsi33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVP0VRc6qM1p81_nrPTwOycd0M_6yQ6xA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275626890043-gbkhdo9nshvs585a9o7cnp4fk6rmsi33.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "275626890043-afjhs65ju79972f8krbpld4r245qlvgn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "SuperGigaCRM.io"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275626890043:android:5ec210b699662f22be5d1e",
+        "android_client_info": {
+          "package_name": "supergigacrm.io"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275626890043-vp8clkjivpfa5e428cc10vke9m4vmc9f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "supergigacrm.io",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "275626890043-gbkhdo9nshvs585a9o7cnp4fk6rmsi33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVP0VRc6qM1p81_nrPTwOycd0M_6yQ6xA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275626890043-gbkhdo9nshvs585a9o7cnp4fk6rmsi33.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "275626890043-afjhs65ju79972f8krbpld4r245qlvgn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "SuperGigaCRM.io"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
