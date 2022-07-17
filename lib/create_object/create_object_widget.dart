@@ -18,6 +18,7 @@ class _CreateObjectWidgetState extends State<CreateObjectWidget> {
   TextEditingController adressController;
   TextEditingController jkController;
   TextEditingController summController;
+  TextEditingController urlController;
   TextEditingController roomsController;
   TextEditingController floorController;
   TextEditingController areaController;
@@ -31,6 +32,7 @@ class _CreateObjectWidgetState extends State<CreateObjectWidget> {
     adressController = TextEditingController();
     jkController = TextEditingController();
     summController = TextEditingController();
+    urlController = TextEditingController();
     roomsController = TextEditingController();
     floorController = TextEditingController();
     areaController = TextEditingController();
@@ -85,40 +87,36 @@ class _CreateObjectWidgetState extends State<CreateObjectWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 4, 0, 0),
-                        child: Container(
-                          width: 120,
-                          height: 120,
-                          decoration: BoxDecoration(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: Image.asset(
-                                'assets/images/emptyState@2x.png',
-                              ).image,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                blurRadius: 6,
-                                color: Color(0x3A000000),
-                                offset: Offset(0, 2),
-                              )
-                            ],
-                            shape: BoxShape.circle,
-                          ),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(4, 4, 4, 4),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(120),
-                              child: Image.network(
-                                'https://picsum.photos/seed/590/600',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
+                        padding: EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
+                        child: TextFormField(
+                          controller: urlController,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            labelText: 'IMG URL',
+                            hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                width: 2,
                               ),
+                              borderRadius: BorderRadius.circular(8),
                             ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
+                                width: 2,
+                              ),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            contentPadding:
+                                EdgeInsetsDirectional.fromSTEB(20, 32, 20, 12),
                           ),
+                          style: FlutterFlowTheme.of(context).bodyText1,
+                          textAlign: TextAlign.start,
+                          maxLines: 1,
+                          keyboardType: TextInputType.url,
                         ),
                       ),
                       Padding(
@@ -349,12 +347,13 @@ class _CreateObjectWidgetState extends State<CreateObjectWidget> {
                       onPressed: () async {
                         final objectCreateData = createObjectRecordData(
                           rooms: int.parse(roomsController.text),
-                          summ: int.parse(summController.text),
+                          summ: int.parse(urlController.text),
                           adress: adressController.text,
                           newmade: newmadeValue,
                           jk: jkController.text,
                           floor: int.parse(floorController.text),
                           area: int.parse(areaController.text),
+                          photo: urlController.text,
                         );
                         await ObjectRecord.collection
                             .doc()

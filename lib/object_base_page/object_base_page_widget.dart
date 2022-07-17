@@ -2513,9 +2513,17 @@ class _ObjectBasePageWidgetState extends State<ObjectBasePageWidget> {
                                                                       .primaryText,
                                                                   size: 30,
                                                                 ),
-                                                                onPressed: () {
-                                                                  print(
-                                                                      'IconButton pressed ...');
+                                                                onPressed:
+                                                                    () async {
+                                                                  await Navigator
+                                                                      .push(
+                                                                    context,
+                                                                    MaterialPageRoute(
+                                                                      builder:
+                                                                          (context) =>
+                                                                              CreateObjectWidget(),
+                                                                    ),
+                                                                  );
                                                                 },
                                                               ),
                                                               Text(
@@ -2711,12 +2719,12 @@ class _ObjectBasePageWidgetState extends State<ObjectBasePageWidget> {
                                                                             PageTransition(
                                                                               type: PageTransitionType.fade,
                                                                               child: FlutterFlowExpandedImageView(
-                                                                                image: Image.asset(
-                                                                                  'assets/images/image_12.png',
+                                                                                image: Image.network(
+                                                                                  objsItem.photo,
                                                                                   fit: BoxFit.contain,
                                                                                 ),
                                                                                 allowRotation: false,
-                                                                                tag: 'imageTag2',
+                                                                                tag: objsItem.photo,
                                                                                 useHeroAnimation: true,
                                                                               ),
                                                                             ),
@@ -2724,13 +2732,13 @@ class _ObjectBasePageWidgetState extends State<ObjectBasePageWidget> {
                                                                         },
                                                                         child:
                                                                             Hero(
-                                                                          tag:
-                                                                              'imageTag2',
+                                                                          tag: objsItem
+                                                                              .photo,
                                                                           transitionOnUserGestures:
                                                                               true,
                                                                           child:
-                                                                              Image.asset(
-                                                                            'assets/images/image_12.png',
+                                                                              Image.network(
+                                                                            objsItem.photo,
                                                                             width:
                                                                                 250,
                                                                             height:
